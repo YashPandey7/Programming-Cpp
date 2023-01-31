@@ -40,6 +40,17 @@ int main()
 		cout<<pq2.top()<<" ";
 		pq2.pop();
 	}
+
+//  K largest element
+	cout<<"\nK largest elements --  ";
+	int k=3;
+	priority_queue <int> pq3(arr, arr+6);
+	for(int i=0; i<k; i++)
+	{
+		cout<<pq3.top()<<" ";
+		pq3.pop();
+	}
+	
 	
 	return 0;
 }
