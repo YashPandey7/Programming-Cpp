@@ -22,6 +22,10 @@ int main()
 	{
 		cout<<t<<" ";
 	}
+	cout<<endl;
+	cout<<*s.lower_bound(5)<<endl;
+	cout<<*s.lower_bound(6)<<endl;
+	cout<<*s.lower_bound(25)<<endl;
 	
 	return 0;
 }
