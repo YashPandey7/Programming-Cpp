@@ -24,14 +24,15 @@ void init()
 }
 int count(int n)
 {
-	return tbl[n&255] + tbl[(n>>8)&255] + tbl[(n>>16)&255] + tbl[(n>>24)];
+	init();
+	return tbl[n&255] + tbl[(n>>8)&255] + tbl[(n>>16)&255] + tbl[(n>>24)&255];
 }
 
 
 int main()
 {
 //	cout<<count(4);
-	init();
+//	init();
 	int n=9;
 	cout<<count(n)<<endl;
 	cout<<count(7);
