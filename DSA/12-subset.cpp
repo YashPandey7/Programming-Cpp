@@ -16,7 +16,7 @@ int main()
 {
 	string s="ABC";
 	int i=0;
-	string curr="";
+	string curr=" ";
 	set(s,curr,i);
 	
 	return 0;
