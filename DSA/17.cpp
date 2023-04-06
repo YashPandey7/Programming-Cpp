@@ -24,7 +24,7 @@ int count(bool arr[],int n)
 
 int main()
 {
-	bool arr[] = {0,1,1,1,0,0,1,1,1,1,0,1};
+	bool arr[] = {0,1,1,1,0,0,1,1,1,1,1,0,1};
 	int n=sizeof(arr)/sizeof(arr[0]);
 	
 	cout<<count(arr,n);
