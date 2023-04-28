@@ -24,7 +24,7 @@ void bubbleSort(int arr[], int n)
 int main()
 {
 	int arr[] = {5,4,1,2,3};
-	bubble sort(arr, 5);
+	bubbleSort(arr, 5);
 	
 	for(int i=0; i<5; i++)
 	{
