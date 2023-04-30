@@ -31,6 +31,13 @@ int merge(int arr[], int l, int mid, int h)
 			k++;
 		}
 	}
+	while(i<n1)
+	{
+		arr[k] = a[i];
+		i++;
+		k++;
+	}
+	while
 	
 }
 
