@@ -48,10 +48,13 @@ int merge(int arr[], int l, int mid, int h)
 
 int mergeSort(int arr[], int l, int h)
 {
-	int mid = l + (h-l)/2;
-	mergeSort(arr, l, mid);
-	mergeSort(arr, mid+1, h);
-	merge(arr,l, mid, h);
+	if(l<h)
+	{
+		int mid = l + (h-l)/2;
+		mergeSort(arr, l, mid);
+		mergeSort(arr, mid+1, h);
+		merge(arr,l, mid, h);	
+	}
 }
 
 int main()
