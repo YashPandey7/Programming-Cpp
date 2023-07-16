@@ -40,7 +40,30 @@ struct queue{
 	
 	void enqueue(int x)
 	{
-		
+		if(isFull())
+			return ;
+		else
+		{
+			int rear = getRear();
+			if(rear == 0){
+				front++;
+			}
+			rear = (rear + 1)%cap;
+			arr[rear] = x;
+			size++;	
+		}
+	}
+	
+	void dequeue()
+	{
+		if(isEmpty())
+			return ;
+		else
+		{
+			front = (front+1)%cap;
+			cout<<front<<endl;
+			size--;
+		}
 	}
 	
 };
