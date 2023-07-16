@@ -14,15 +14,11 @@ struct queue{
 	}
 	
 	bool isEmpty(){
-		if(front == 0)
-			return 1;
-		return 0;
+		return (size == 0);
 	}
 	
 	bool isFull(){
-		if(size == cap)
-			return true;
-		return false;
+		return (size == cap);
 	}
 	
 	int getFront()
@@ -45,9 +41,6 @@ struct queue{
 		else
 		{
 			int rear = getRear();
-			if(rear == 0){
-				front++;
-			}
 			rear = (rear + 1)%cap;
 			arr[rear] = x;
 			size++;	
@@ -60,10 +53,28 @@ struct queue{
 			return ;
 		else
 		{
+			cout<<arr[front]<<endl;
 			front = (front+1)%cap;
-			cout<<front<<endl;
 			size--;
 		}
 	}
 	
+	void size1()
+	{
+		cout<<size<<endl;
+	}
 };
+
+int main()
+{
+	queue q(5);
+	q.enqueue(2);
+	q.enqueue(5);
+	q.enqueue(6);
+	
+	q.size1();
+	q.dequeue();
+	q.dequeue();
+	q.dequeue();
+	cout<<q.isEmpty();
+}
