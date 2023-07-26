@@ -11,3 +11,13 @@ struct Node {
 		left = right = NULL;
 	}
 };
+
+int main()
+{
+	Node *root = new Node(5);
+	root->left = new Node(10);
+	root->right = new Node(15);
+	root->left->left = new Node(20);
+	
+	return 0;
+}
