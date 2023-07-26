@@ -1,4 +1,5 @@
 #include<iostream>
+#include <queue>
 using namespace std;
 
 struct Node {
@@ -23,6 +24,30 @@ void inorder(Node *root)
 	inorder(root->right);
 }
 
+void levelTraversal(Node *root)
+{
+	queue<Node *> q;
+	
+	if(root == NULL)
+		return;
+	q.push(root);
+	while(!q.empty())
+	{
+		Node *curr = q.front();
+//		cout<<q.front()->key<<" ";
+		q.pop();
+		cout<<curr->key<<" ";
+		if(curr->left)
+		{
+			q.push(curr->left);
+		}
+		if(curr->right)
+		{
+			q.push(curr->right);
+		}
+	}
+}
+
 int main()
 {
 	Node *root = new Node(5);
@@ -31,6 +56,10 @@ int main()
 	root->left->left = new Node(20);
 	root->left->right = new Node(25);
 	
+	cout<<"Inorder DFS -->  ";
 	inorder(root);
+	
+	cout<<endl<<"BFS -->  ";
+	levelTraversal(root);
 	return 0;
 }
